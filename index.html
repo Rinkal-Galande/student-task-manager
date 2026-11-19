@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Student Task Manager</h1>
+    <p style="text-align: center;">Organize your study tasks in one place.</p>
+
+    <h2>Add a New Task</h2>
+
+    <form>
+        <label for="taskName">Task Name:</label>
+        <input
+            type="text"
+            id="taskName"
+            placeholder="Enter your task"
+        >
+
+        <label for="deadline">Deadline:</label>
+        <input type="date" id="deadline">
+
+        <button type="button">Add Task</button>
+    </form>
+    <h2>Task Statistics</h2>
+
+<div class="stats">
+    <div class="stat-card">
+        <h3>Total Tasks</h3>
+        <p id="totalCount">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Pending</h3>
+        <p id="pendingCount">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Completed</h3>
+        <p id="completedCount">0</p>
+    </div>
+</div>
+<div class="progress-section">
+    <h3>Study Progress</h3>
+
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+
+    <p id="progressText">0% completed</p>
+</div>
+
+    
+    <h2>My Tasks</h2>
+    <input
+    type="text"
+    id="searchTask"
+    placeholder="Search your tasks..."
+>
+
+<div class="filters">
+    <button type="button" id="allTasks">All Tasks</button>
+    <button type="button" id="pendingTasks">Pending</button>
+    <button type="button" id="completedTasks">Completed</button>
+</div>
+
+<ul id="taskList"></ul>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
